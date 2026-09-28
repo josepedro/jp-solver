@@ -1,0 +1,14 @@
+# build products
+amr
+uniform
+*.o
+
+# solver output
+*.vti
+*.vtp
+out*/
+frames/
+
+# editor and OS
+*.swp
+.DS_Store
