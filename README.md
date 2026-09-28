@@ -8,6 +8,14 @@ Taylor-Green vortex, and is designed to extend to further physics and couplings.
 
 Full render on YouTube: https://www.youtube.com/watch?v=mv-WQxnAyp4
 
+## The name
+
+JP Solver stands for José Pedro's Solver. The project exists to put a single design philosophy and
+years of computational physics experience into a running solver, rather than leaving them in notes
+and papers. The principle at its center is GPU-native execution, and the name marks the codebase as
+the place where that rule is carried through without compromise, from the lattice Boltzmann core
+today to whatever physics attaches on top of it later.
+
 ## Philosophy: GPU-native
 
 The design rule is single. The solver never leaves the GPU during a time step. Everything that
@@ -122,16 +130,6 @@ numpy and matplotlib.
 ./amr --n 48 --re 1600 --l1 sensor --l2 sensor --vtk out --frames 240
 pvbatch scripts/render_tgv3d.py --in out --out frames
 ```
-
-## Roadmap
-
-The solver is structured so that new physics attaches on top of the same GPU-native core. Planned
-directions keep the rule that the hot path stays on the device:
-
-* Additional collision operators and lattices.
-* Coupled particle dynamics (a discrete element method in a separate device pool, kept distinct from
-  the AMR block pool).
-* Multi-GPU, where the zero host round-trip in the adaptation is what makes frequent regrids cheap.
 
 ## License
 
