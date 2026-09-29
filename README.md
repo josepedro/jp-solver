@@ -11,7 +11,7 @@ Full render on YouTube: https://www.youtube.com/watch?v=mv-WQxnAyp4
 ## The name
 
 JP Solver stands for José Pedro's Solver. The project exists to put a single design philosophy and
-years of computational physics experience into a running solver, rather than leaving them in notes
+years of computational science experience into a running solver, rather than leaving them in notes
 and papers. The principle at its center is GPU-native execution, and the name marks the codebase as
 the place where that rule is carried through without compromise, from the lattice Boltzmann core
 today to whatever physics attaches on top of it later.
